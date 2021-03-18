@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Instrument Tuner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.4.9/Tone.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <div class="metronome"></div>
+    <h1>Metronome</h1>
+    <button onclick="Tone.Transport.start()">Start</button>
+    <button onclick="Tone.Transport.stop()">Stop</button>
+    <input name="bpm" type="text" />
+  </body>
+</html>

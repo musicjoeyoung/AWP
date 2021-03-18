@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Instrument Tuner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.4.9/Tone.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <h1>Instrument Tuner</h1>
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#news">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Instruments
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Trumpet</a>
+          <a href="#">Clarinet</a>
+          <a href="#">Cello</a>
+        </div>
+      </div>
+    </div>
+
+    <p></p>
+
+    <p></p>
+    <div>
+      <p>The Bb trumpet is a transposing instrument.</p>
+      <p>That means the written note and rendered note are different.</p>
+      <p>
+        For example, on the chromatic scale below, the note the player reads and
+        plays (Trumpet in Bb) ACTUALLY sounds a whole note lower (Trumpet in C).
+      </p>
+    </div>
+    <div id="imageDiv" class="sticky">
+      <img id="defaultTrumpetImg" src="images/0valvesDown.png" />
+      <img
+        id="chromaticNotes"
+        src="images/chromaticPitchesNotated/Trumpet-Chromatic-0.png"
+      />
+    </div>
+    <p></p>
+    <div class="flex-container">
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/gb3.jpg" />
+        <button onclick="play('E3', 'all', '1')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/g3.jpg" />
+        <button onclick="play('F3', '1and3', '2')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/ab3.jpg" />
+        <button onclick="play('F#3', '2and3' ,'3')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/a3.png" />
+        <button onclick="play('G3', '1and2', '4')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/bb3.png" />
+        <button onclick="play('G#3', '1','5')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/b3.png" />
+        <button onclick="play('A3', '2', '6')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/c4.jpg" />
+        <button onclick="play('A#3', '0','7')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/db4.jpg" />
+        <button onclick="play('B3', 'all', '8')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/d4.jpg" />
+        <button onclick="play('C4', '1and3', '9')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/eb4.jpg" />
+        <button onclick="play('C#4', '2and3', '10')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/e4.jpg" />
+        <button onclick="play('D4', '1and2', '11')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/f4.jpg" />
+        <button onclick="play('D#4', '1', '12')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/gb4.jpg" />
+        <button onclick="play('E4', '2', '13')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/g4.jpg" />
+        <button onclick="play('F4', '0', '14')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/ab4.jpg" />
+        <button onclick="play('F#4', '2and3', '15')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/a4.png" />
+        <button onclick="play('G4', '1and2', '16')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/bb4.jpg" />
+        <button onclick="play('G#4', '1', '17')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/b4.png" />
+        <button onclick="play('A4', '2', '18')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/c5.jpg" />
+        <button onclick="play('A#4', '0', '19')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/db5.jpg" />
+        <button onclick="play('B4', '1and2', '20')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/d5.jpg" />
+        <button onclick="play('C5', '1', '21')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/eb5.jpg" />
+        <button onclick="play('C#5', '2', '22')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/e5.jpg" />
+        <button onclick="play('D5', '0', '23')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/f5.jpg" />
+        <button onclick="play('D#5', '1', '24')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/gb5.jpg" />
+        <button onclick="play('E5', '2', '25')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/g5.png" />
+        <button onclick="play('F5', '0', '26')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/ab5.png" />
+        <button onclick="play('F#5', '2and3', '27')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/a5.png" />
+        <button onclick="play('G5', '1and2', '28')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/bb5.png" />
+        <button onclick="play('G#5', '1', '29')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/b5.png" />
+        <button onclick="play('A5', '2', '30')">Play</button>
+      </div>
+      <div class="item">
+        <img id="noteImg" src="images/notatedPitches/c6.png" />
+        <button onclick="play('A#5', '0', '31')">Play</button>
+      </div>
+    </div>
+    <h3 id="pageGoals">Page Goals</h3>
+    <div id="container">
+      <ul>
+        <li>
+          Notated trumpet pitches w/fingerings and corresponding audio pitch
+        </li>
+        <li>Can "play" trumpet with keyboard.</li>
+        <ul>
+          <li>"J","K","L" for 1,2,3 valves</li>
+          <li>"E" for up in range</li>
+          <li>"D" for down in range</li>
+          <li>Holding down "valve" keys sustains notes</li>
+        </ul>
+        <li>
+          Loftier goal: create a flash trumpet whose valves move with
+          corresponding keyboard input and not clicking.
+        </li>
+        <li>Add Flash?</li>
+        <li>
+          Include secondary image of staff with notes (chromatic scale) where
+          the note selected changes from black to red on both the trumpet-pitch
+          scale AND a concert-pitch scale.
+        </li>
+      </ul>
+    </div>
+    <div class="metronome">
+      <h1>Metronome</h1>
+      <button onclick="Tone.Transport.start()">Start</button>
+      <button onclick="Tone.Transport.stop()">Stop</button>
+    </div>
+  </body>
+</html>
